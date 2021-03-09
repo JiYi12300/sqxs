@@ -75,7 +75,7 @@ async function all() {
     if ($.isNode()) {
 
         //let sqxsck = require('./sqxsck1.json');
-        let sqxsck = process.env.SQ_COOKIES;
+        let sqxsck = JSON.parse(process.env.SQ_COOKIES); //环境变量默认是String类型,通过JSON.parse转换为json格式.
         let CountNumber = sqxsck.settings[1].val;
         $.log(`============ 共 ${CountNumber} 个${jobname}账号=============`);
         for (let i = 0; i < CountNumber; i++) {
