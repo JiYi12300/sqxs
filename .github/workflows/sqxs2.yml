@@ -23,11 +23,11 @@ jobs:
           npm install cron
           npm install request
           curl ipinfo.io/json
-      
-      - name: '【书旗小说2-视频】'
-        run: |  
         env:
          SQ_COOKIES: ${{secrets.SQCOOKIES}}
+         
+      - name: '【书旗小说2-视频】'
+        run: |  
           node Task/sqxs2_video.js
           
       - name: '【书旗小说2-阅读】'
