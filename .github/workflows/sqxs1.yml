@@ -23,18 +23,18 @@ jobs:
           npm install cron
           npm install request
           curl ipinfo.io/json
-      
+  
       - name: '【书旗小说1-视频】'
         run: |  
           node Task/sqxs1_video.js
-        env:
-         SQ_COOKIES: ${{ secrets.SQ_COOKIES1 }}
+        #env:
+         #SQ_COOKIES: ${{ secrets.SQ_COOKIES1 }}
           
       - name: '【书旗小说1-阅读】'
         run: |  
          node Task/sqxs1_read.js
-        env:
-         SQ_COOKIES: ${{ secrets.SQ_COOKIES1 }}
+        #env:
+         #SQ_COOKIES: ${{ secrets.SQ_COOKIES1 }}
         
  
 
