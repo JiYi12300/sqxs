@@ -5,6 +5,9 @@ on:
     types: started
   schedule:
     - cron: '10 0,9 * * *'
+env:
+  SQ_COOKIES: ${{ secrets.SQ_COOKIES1 }}
+  
 jobs:
   build:
     runs-on: ubuntu-latest       
