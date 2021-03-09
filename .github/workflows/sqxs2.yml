@@ -29,13 +29,13 @@ jobs:
         run: |  
           node Task/sqxs2_video.js
         env:
-         SQ_COOKIES: ${{secrets.SQCOOKIES}};
+         SQ_COOKIES: ${{secrets.SQ_COOKIES}};
           
       - name: '【书旗小说2-阅读】'
         run: |  
           node Task/sqxs2_read.js
         env:
-         SQ_COOKIES: ${{secrets.SQCOOKIES}};
+         SQ_COOKIES: ${{secrets.SQ_COOKIES}};
 
 
 
