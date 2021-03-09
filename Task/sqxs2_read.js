@@ -75,7 +75,7 @@ async function all() {
     if ($.isNode()) {
 
         // let sqxsck = require('./sqxsck2.json');
-        let sqxsck = process.env.SQ_COOKIES;
+        let sqxsck = JSON.parse(process.env.SQ_COOKIES); //var json = JSON.parse(str);
         let CountNumber = sqxsck.settings[1].val;
         $.log(`============ 共 ${CountNumber} 个${jobname}账号=============`+ typeof(sqxsck));
         for (let i = 0; i < CountNumber; i++) {
