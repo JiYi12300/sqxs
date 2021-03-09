@@ -28,7 +28,7 @@ jobs:
         run: |  
           node Task/sqxs1_video.js
         env:
-         SQ_COOKIES: ${{ secrets.SQ_COOKIES }}
+         SQ_COOKIES: ${{ toJSON(secrets.SQ_COOKIES) }}
           
       - name: '【书旗小说1-阅读】'
         run: |  
