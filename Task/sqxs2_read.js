@@ -76,8 +76,9 @@ async function all() {
 
         // let sqxsck = require('./sqxsck2.json');
         let sqxsck = JSON.parse(process.env.SQ_COOKIES); //var json = JSON.parse(str);
+        let test = process.env.SQ_COOKIES;
         let CountNumber = sqxsck.settings[1].val;
-        $.log(`============ 共 ${CountNumber} 个${jobname}账号=============`+ typeof(sqxsck));
+        $.log(`============ 共 ${CountNumber} 个${jobname}账号=============`+ typeof(sqxsck)+ typeof(test));
         for (let i = 0; i < CountNumber; i++) {
             if (sqxsck.datas[0 + 6 * i].val) {
                 readckArr = sqxsck.datas[0 + 6 * i].val.split('&&');
